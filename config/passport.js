@@ -150,6 +150,7 @@ module.exports = function(passport) {
                             user.facebook.token = token;
                             user.facebook.name  = profile.name.givenName + ' ' + profile.name.familyName;
                             user.facebook.email = profile.emails[0].value;
+                            user.facebook.gender = profile.gender;
 
                             user.save(function(err) {
                                 if (err)
@@ -157,6 +158,7 @@ module.exports = function(passport) {
                                 return done(null, user);
                             });
                         }
+                        console.log('I AM HERE ' + profile.gender);
 
                         return done(null, user); // user found, return that user
                     } else {
@@ -167,6 +169,8 @@ module.exports = function(passport) {
                         newUser.facebook.token = token;
                         newUser.facebook.name  = profile.name.givenName + ' ' + profile.name.familyName;
                         newUser.facebook.email = profile.emails[0].value;
+                        console.log('I AM HERE ' + profile.gender);
+                        newUser.facebook.gender = profile.gender;
 
                         newUser.save(function(err) {
                             if (err)

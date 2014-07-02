@@ -4,7 +4,7 @@ module.exports = function(app, passport) {
 
 	// show the home page (will also have our login links)
 	app.get('/', function(req, res) {
-		console.log(req.session);
+		console.log(req.user);
 		res.render('index.ejs', {
 			user: req.user
 		});
@@ -57,7 +57,7 @@ module.exports = function(app, passport) {
 	// facebook -------------------------------
 
 		// send to facebook to do the authentication
-		app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+		app.get('/auth/facebook', passport.authenticate('facebook', { scope : ['email', 'public_profile'] }));
 
 		// handle the callback after facebook has authenticated the user
 		app.get('/auth/facebook/callback',
