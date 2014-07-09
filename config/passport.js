@@ -128,11 +128,11 @@ module.exports = function(passport) {
         clientID        : configAuth.facebookAuth.clientID,
         clientSecret    : configAuth.facebookAuth.clientSecret,
         callbackURL     : configAuth.facebookAuth.callbackURL,
+        profileFields   : ['id', 'first_name', 'last_name', 'photos', 'emails', 'gender', 'locale', 'age_range'],
         passReqToCallback : true // allows us to pass in the req from our route (lets us check if a user is logged in or not)
 
     },
     function(req, token, refreshToken, profile, done) {
-
         // asynchronous
         process.nextTick(function() {
 
@@ -140,6 +140,13 @@ module.exports = function(passport) {
             if (!req.user) {
 
                 User.findOne({ 'facebook.id' : profile.id }, function(err, user) {
+                    console.log('NAME: ' + profile.name.givenName + ' ' + profile.name.familyName);
+                    console.log('GENDER: ' + profile.gender);
+                    console.log('EMAIL: ' + profile.emails[0].value);
+                    console.log('PHOTOS: ' + profile.photos[0].value);
+                    console.log('PROFILE: ' + profile);
+                    console.log('LOCALE: ' + profile.locale);
+                    console.log('AGE: ' + profile.age_range);
                     if (err)
                         return done(err);
 
@@ -158,8 +165,6 @@ module.exports = function(passport) {
                                 return done(null, user);
                             });
                         }
-                        console.log('I AM HERE ' + profile.gender);
-
                         return done(null, user); // user found, return that user
                     } else {
                         // if there is no user, create them
@@ -169,7 +174,6 @@ module.exports = function(passport) {
                         newUser.facebook.token = token;
                         newUser.facebook.name  = profile.name.givenName + ' ' + profile.name.familyName;
                         newUser.facebook.email = profile.emails[0].value;
-                        console.log('I AM HERE ' + profile.gender);
                         newUser.facebook.gender = profile.gender;
 
                         newUser.save(function(err) {
