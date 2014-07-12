@@ -1,3 +1,8 @@
+body {
+	background: #171d25;
+	height: 4000px;
+}
+
 .ip-sidebar {
 	text-align: center;
 }
@@ -12,4 +17,19 @@
     height: 20px;
     width: 160px;
     color: #CCC;
+}
+
+.ip-fixed-toolbar {
+
+}
+
+.ip-ft-container {
+	text-align: center;
+}
+
+.ip-ft-icon {
+	color:#fff;
+	font-size:45px;
+	margin: 30px;
+	/*position: fixed;*/
 }
