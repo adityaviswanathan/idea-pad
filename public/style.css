@@ -1,5 +1,5 @@
 body {
-	background: #171d25;
+	/*background: #171d25;*/
 	height: 4000px;
 }
 
@@ -32,4 +32,8 @@ body {
 	font-size:45px;
 	margin: 30px;
 	/*position: fixed;*/
+}
+
+.ip-new-project {
+	
 }

@@ -15,7 +15,7 @@
 <!-- <div class='container'> -->
 	
 	<div class='row'>
-		<div class='col-md-1'>
+		<div class='col-md-3'>
 			<div>hi</div>
 			<div class='ip-fixed-toolbar'>
 				<div class='ip-ft-container'>
@@ -23,11 +23,44 @@
 				</div>
 			</div>
 		</div>
-		<div class='col-md-3' style='background-color:#333;'>yo</div>
-		<div class='col-md-4' style='background-color:#ddd;'>asdf</div>
-		<div class='col-md-4' style='background-color:#aaa;'>fdf</div>
+		<div class='col-md-9'>
+			<div class='row ip-new-project'>
+				<form>
+					<h3>Analog</h3>
+				 	<input type="text" name="ip-form-analog-1">&nbspfor&nbsp<input type="text" name="ip-form-analog-2">
+					<br>
+
+					<h3>Replacement</h3>
+					replaces&nbsp<input type="text" name="ip-form-replacement">
+					<br>
+
+					<h3>Problem</h3>
+					the product solves <input type="text" name="ip-form-problem">
+					<br>
+
+					<h3>Data sources</h3>
+					<ul>
+						<li><input type="text" name="ip-form-data-source" onkeydown="return newField(event)"></li>
+					</ul>
+					<br>
+
+					<h3>Streams</h3>
+					<input type="radio" name="ip-form-stream-unit">unit
+					<input type="radio" name="ip-form-stream-subscription">subscription
+					<input type="radio" name="ip-form-stream-subscription">commission
+					<input type="radio" name="ip-form-stream-subscription">advertising
+
+					<div class="ip-np-streams-unit">
+						sell each at&nbsp<input type="text" name="ip-form-streams-unit">						
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 <!-- </div> -->
 
 </body>
+ 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="/public/client.js"></script>
 </html>
