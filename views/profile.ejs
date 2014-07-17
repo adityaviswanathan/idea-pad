@@ -17,7 +17,6 @@
 	
 	<div class='row'>
 		<div class='col-md-3 ip-sidebar'>
-			<div>hi</div>
 			<div class='ip-fixed-toolbar'>
 				<div class='ip-ft-container'>
 					<div class="ip-sidebar-pic-container"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/t31.0-1/c50.50.621.621/p720x720/904098_593933363951736_1256872796_o.jpg" class="ip-sidebar-pic"></div>
@@ -25,54 +24,105 @@
 			</div>
 		</div>
 		<div class='col-md-9 ip-content-pane'>
-			<div class='row'>
-				<div class='ip-project-progress'>
-					<div class='ip-progress-item ip-progress-item-1'><i class="fa fa-circle"></i></div>
+			<div class='row ip-project-subheader-container'>
+
+				<div class='col-md-1 col-md-offset-1 ip-project-subheader'>
+					<div class='ip-new-project-panel-controller'>
+						<div class='ip-new-project-panel-direction ip-new-project-panel-prev'>prev</div>						
+					</div>
+				</div>
+				<div class='col-md-4 ip-project-subheader'>DRAFT/PUBLISH</div>
+				<div class='col-md-4 ip-project-subheader ip-project-progress'>
+
+					<div class='ip-progress-item ip-progress-item-1'><div class='ip-progress-item-inner ip-progress-item-inner-1'></div></div>
 					<div class='ip-progress-divider'></div>
-					<div class='ip-progress-item ip-progress-item-2'><i class="fa fa-circle"></i></div>
+					<div class='ip-progress-item ip-progress-item-2'><div class='ip-progress-item-inner ip-progress-item-inner-2'></div></div>
 					<div class='ip-progress-divider'></div>
-					<div class='ip-progress-item ip-progress-item-3'><i class="fa fa-circle"></i></div>
+					<div class='ip-progress-item ip-progress-item-3'><div class='ip-progress-item-inner ip-progress-item-inner-3'></div></div>
 					<div class='ip-progress-divider'></div>
-					<div class='ip-progress-item ip-progress-item-4'><i class="fa fa-circle"></i></div>
+					<div class='ip-progress-item ip-progress-item-4'><div class='ip-progress-item-inner ip-progress-item-inner-4'></div></div>
 					<div class='ip-progress-divider'></div>
-					<div class='ip-progress-item ip-progress-item-5'><i class="fa fa-circle"></i></div>
+					<div class='ip-progress-item ip-progress-item-5'><div class='ip-progress-item-inner ip-progress-item-inner-5'></div></div>
 					<div class='ip-progress-divider'></div>
-					<div class='ip-progress-item ip-progress-item-6'><i class="fa fa-circle"></i></div>
+					<div class='ip-progress-item ip-progress-item-6'><div class='ip-progress-item-inner ip-progress-item-inner-6'></div></div>
+				</div>
+				<div class='col-md-1 ip-project-subheader'>
+					<div class='ip-new-project-panel-controller'>
+						<div class='ip-new-project-panel-direction ip-new-project-panel-next'>next</div>						
+					</div>
 				</div>
 			</div>
+
+			<hr>
+
 			<div class='row ip-new-project'>
 				<form>
-					<h3>One sentence</h3>
-				 	<input type="text" name="ip-form-os-1">
-					<br>
+					<div class='ip-new-project-section ip-new-project-section-1 ip-new-project-active'>
+						<h1>one sentence</h1>
+						<br>
+						<div class='ip-new-project-panel-description'>Provide a one-sentence description of your idea.</div>
+						<br>
+					 	<input type="text" name="ip-form-os-1">
+						<br>
+					</div>
 
-					<h3>Analog</h3>
-				 	<input type="text" name="ip-form-analog-1">&nbspfor&nbsp<input type="text" name="ip-form-analog-2">
-					<br>
+					<div class='ip-new-project-section ip-new-project-section-2'>
+						<h1>analog</h1>
+						<br>
+						<div class='ip-new-project-panel-description'>What existing products or services are most similar to your idea?</div>
+						<br>
+					 	<input type="text" name="ip-form-analog-1">&nbspfor&nbsp<input type="text" name="ip-form-analog-2">
+						<br>
+					</div>
 
-					<h3>Replacement</h3>
-					replaces&nbsp<input type="text" name="ip-form-replacement">
-					<br>
+					<div class='ip-new-project-section ip-new-project-section-3'>
+						<h1>replacement</h1>
+						<br>
+						<div class='ip-new-project-panel-description'>What products or services does your idea replace?</div>
+						<br>
+						replaces&nbsp<input type="text" name="ip-form-replacement">
+						<br>
+					</div>
 
-					<h3>Problem</h3>
-					the product solves <input type="text" name="ip-form-problem">
-					<br>
+					<div class='ip-new-project-section ip-new-project-section-4'>
+						<h1>problem</h1>
+						<br>
+						<div class='ip-new-project-panel-description'>What problem does your idea solve?</div>
+						<br>
+						the product solves <input type="text" name="ip-form-problem">
+						<br>
+					</div>
 
-					<h3>Data sources</h3>
-					<ul>
-						<li><input type="text" name="ip-form-data-source" onkeydown="return newField(event)"></li>
-					</ul>
-					<br>
+					<div class='ip-new-project-section ip-new-project-section-5'>
+						<h1>data sources</h1>
+						<br>
+						<div class='ip-new-project-panel-description'>Where will you need data from to make this work?</div>
+						<br>
+						<ul>
+							<li><input type="text" name="ip-form-data-source" onkeydown="return newField(event)"></li>
+						</ul>
+						<br>
+					</div>
 
-					<h3>Streams</h3>
-					<input type="radio" name="ip-form-stream" class="ip-form-stream-unit">unit
-					<input type="radio" name="ip-form-stream" class="ip-form-stream-subs">subscription
-					<input type="radio" name="ip-form-stream" class="ip-form-stream-comm">commission
-					<input type="radio" name="ip-form-stream" class="ip-form-stream-ads">advertising
-					<input type="radio" name="ip-form-stream" class="ip-form-stream-other">other
-
-					<div class="ip-form-stream-display"></div>
+					<div class='ip-new-project-section ip-new-project-section-6'>
+						<h1>streams</h1>
+						<br>
+						<div class='ip-new-project-panel-description'>What is the intended revenue stream?</div>
+						<br>
+						<input type="radio" name="ip-form-stream" class="ip-form-stream-unit">unit
+						<input type="radio" name="ip-form-stream" class="ip-form-stream-subs">subscription
+						<input type="radio" name="ip-form-stream" class="ip-form-stream-comm">commission
+						<input type="radio" name="ip-form-stream" class="ip-form-stream-ads">advertising
+						<input type="radio" name="ip-form-stream" class="ip-form-stream-other">other
+						<div class="ip-form-stream-display"></div>
+					</div>
 				</form>
+			</div>
+
+			<br>
+
+			<div class='row'>
+				
 			</div>
 		</div>
 	</div>

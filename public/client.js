@@ -13,7 +13,6 @@ function newField(event) {
 
 $("input[name='ip-form-stream']").on('click', function() {
 	var value = $(this).attr('class');
-
     switch(value) {
     	case 'ip-form-stream-unit':
     		$(this).siblings('.ip-form-stream-display').html('sell each at&nbsp<input type="number" name="ip-form-stream-unit-price">');
@@ -30,4 +29,31 @@ $("input[name='ip-form-stream']").on('click', function() {
     	case 'ip-form-stream-other':
     		$(this).siblings('.ip-form-stream-display').html('one sentence on how it\'ll make money:&nbsp<input type="text" class="ip-form-stream-other-sentence">');	
     }    
+});
+
+$('.ip-new-project-active').css('opacity', '1');
+
+$('.ip-new-project-panel-controller .ip-new-project-panel-direction').on('click', function() {
+	var curr_active = $('.ip-new-project-active');
+	if($(this).hasClass('ip-new-project-panel-prev')) { //go previous	
+		if(curr_active.prev().length > 0) {
+			curr_active.css('opacity', '0');
+			setTimeout(function() {
+				curr_active.removeClass('ip-new-project-active');
+				curr_active.prev().addClass('ip-new-project-active');
+				curr_active.prev().css('opacity', '1');
+			}, 500);		
+			
+		}
+	} else { //go next				
+		if(curr_active.next().length > 0) {
+			curr_active.css('opacity', '0');
+			setTimeout(function() {
+				curr_active.removeClass('ip-new-project-active');
+				curr_active.next().addClass('ip-new-project-active');
+				curr_active.next().css('opacity', '1');
+			}, 500);
+			
+		}
+	}
 });

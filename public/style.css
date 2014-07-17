@@ -34,7 +34,7 @@
 
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	font-family: 'fenixregular';
 }
 
@@ -91,26 +91,38 @@ input:hover {
 	margin: 30px;
 }
 
+.ip-project-subheader-container {
+	height: 120px;
+}
+
+.ip-project-subheader {
+	padding-top: 50px;
+	text-align: center;
+}
+
 .ip-project-progress {
-	height: 100px;
-	background: #f8f5f0;
 	text-align: center;
 	margin: 0 auto;
-	width: 85%;
-	padding-top: 40px;
 }
 
 .ip-progress-item {
 	display: inline-block;
-	color: #fff;
+	width: 20px;
+	height: 20px;
+	background: rgba(62, 63, 58, 0.3);
+	border-radius: 100px;
+}
+
+.ip-progress-item-inner {
+	
 }
 
 .ip-progress-divider {
 	display: inline-block;
 	width: 10%;
-	height: 3px;
-	background: #fff;
-	margin-bottom: 10px;
+	height: 2px;
+	background: rgba(62, 63, 58, 0.3);
+	margin-bottom: 9px;
 	margin-right: -5px;
 	margin-left: -5px;
 }
@@ -131,6 +143,10 @@ input:hover {
 	padding-left: 0px;
 }
 
+.ip-content-pane input {
+	font-size: 26px;
+}
+
 .ip-sidebar {
 	position: fixed;
     width: 25%;
@@ -139,6 +155,7 @@ input:hover {
 
 .ip-sidebar-pic-container {
 	margin: 0 auto;
+	margin-top: 25px;
 	max-width: 88px;
 	overflow: hidden;
 	border-radius: 200px;
@@ -150,4 +167,31 @@ input:hover {
 
 .ip-sidebar-pic {
 	max-width: 80px;
+}
+
+.ip-new-project-section {
+	display: none;
+	opacity: 0;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.ip-new-project-section h1 {
+	font-size: 65px;
+	opacity: 0.3;
+}
+
+.ip-new-project-active {
+	display: block;
+	/*opacity: 1;*/
+}
+
+.ip-new-project-panel-back, .ip-new-project-panel-front {
+
+}
+
+.ip-new-project-panel-description {
+	font-size: 20px;
 }
