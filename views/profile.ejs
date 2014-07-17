@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 	<link rel="stylesheet" href="public/style.css">
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
 	<style>
 		body 		{ word-wrap:break-word; }
 	</style>
@@ -15,17 +16,36 @@
 <!-- <div class='container'> -->
 	
 	<div class='row'>
-		<div class='col-md-3'>
+		<div class='col-md-3 ip-sidebar'>
 			<div>hi</div>
 			<div class='ip-fixed-toolbar'>
 				<div class='ip-ft-container'>
-					<i class="fa fa-square-o ip-ft-icon"></i>
+					<div class="ip-sidebar-pic-container"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/t31.0-1/c50.50.621.621/p720x720/904098_593933363951736_1256872796_o.jpg" class="ip-sidebar-pic"></div>
 				</div>
 			</div>
 		</div>
-		<div class='col-md-9'>
+		<div class='col-md-9 ip-content-pane'>
+			<div class='row'>
+				<div class='ip-project-progress'>
+					<div class='ip-progress-item ip-progress-item-1'><i class="fa fa-circle"></i></div>
+					<div class='ip-progress-divider'></div>
+					<div class='ip-progress-item ip-progress-item-2'><i class="fa fa-circle"></i></div>
+					<div class='ip-progress-divider'></div>
+					<div class='ip-progress-item ip-progress-item-3'><i class="fa fa-circle"></i></div>
+					<div class='ip-progress-divider'></div>
+					<div class='ip-progress-item ip-progress-item-4'><i class="fa fa-circle"></i></div>
+					<div class='ip-progress-divider'></div>
+					<div class='ip-progress-item ip-progress-item-5'><i class="fa fa-circle"></i></div>
+					<div class='ip-progress-divider'></div>
+					<div class='ip-progress-item ip-progress-item-6'><i class="fa fa-circle"></i></div>
+				</div>
+			</div>
 			<div class='row ip-new-project'>
 				<form>
+					<h3>One sentence</h3>
+				 	<input type="text" name="ip-form-os-1">
+					<br>
+
 					<h3>Analog</h3>
 				 	<input type="text" name="ip-form-analog-1">&nbspfor&nbsp<input type="text" name="ip-form-analog-2">
 					<br>
@@ -45,14 +65,13 @@
 					<br>
 
 					<h3>Streams</h3>
-					<input type="radio" name="ip-form-stream-unit">unit
-					<input type="radio" name="ip-form-stream-subscription">subscription
-					<input type="radio" name="ip-form-stream-subscription">commission
-					<input type="radio" name="ip-form-stream-subscription">advertising
+					<input type="radio" name="ip-form-stream" class="ip-form-stream-unit">unit
+					<input type="radio" name="ip-form-stream" class="ip-form-stream-subs">subscription
+					<input type="radio" name="ip-form-stream" class="ip-form-stream-comm">commission
+					<input type="radio" name="ip-form-stream" class="ip-form-stream-ads">advertising
+					<input type="radio" name="ip-form-stream" class="ip-form-stream-other">other
 
-					<div class="ip-np-streams-unit">
-						sell each at&nbsp<input type="text" name="ip-form-streams-unit">						
-					</div>
+					<div class="ip-form-stream-display"></div>
 				</form>
 			</div>
 		</div>

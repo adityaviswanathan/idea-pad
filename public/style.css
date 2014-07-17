@@ -1,6 +1,64 @@
+@font-face {
+    font-family: 'fabricaregular';
+    src: url('fonts/fabrica/fabrica-webfont.eot');
+    src: url('fonts/fabrica/fabrica-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/fabrica/fabrica-webfont.woff') format('woff'),
+         url('fonts/fabrica/fabrica-webfont.ttf') format('truetype'),
+         url('fonts/fabrica/fabrica-webfont.svg#fabricaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'fenixregular';
+    src: url('fonts/fenix/fenix-regular-webfont.eot');
+    src: url('fonts/fenix/fenix-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/fenix/fenix-regular-webfont.woff') format('woff'),
+         url('fonts/fenix/fenix-regular-webfont.ttf') format('truetype'),
+         url('fonts/fenix/fenix-regular-webfont.svg#fenixregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'homizio_novalight';
+    src: url('fonts/homizio/homizio-light-webfont.eot');
+    src: url('fonts/homizio/homizio-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/homizio/homizio-light-webfont.woff') format('woff'),
+         url('fonts/homizio/homizio-light-webfont.ttf') format('truetype'),
+         url('fonts/homizio/homizio-light-webfont.svg#homizio_novalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1, h2, h3 {
+	font-family: 'fenixregular';
+}
+
 body {
 	/*background: #171d25;*/
 	height: 4000px;
+	font-family: 'fabricaregular';
+	background: #f8f5f0;
+}
+
+input {
+	/*-webkit-appearance:none;*/
+	background-color: #f8f5f0;
+	border: none;
+	border-bottom: dotted #3e3f3a 1px;
+	border-radius: 2px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+input:hover {
+	background-color: #fff;
 }
 
 .ip-sidebar {
@@ -31,9 +89,65 @@ body {
 	color:#fff;
 	font-size:45px;
 	margin: 30px;
-	/*position: fixed;*/
+}
+
+.ip-project-progress {
+	height: 100px;
+	background: #f8f5f0;
+	text-align: center;
+	margin: 0 auto;
+	width: 85%;
+	padding-top: 40px;
+}
+
+.ip-progress-item {
+	display: inline-block;
+	color: #fff;
+}
+
+.ip-progress-divider {
+	display: inline-block;
+	width: 10%;
+	height: 3px;
+	background: #fff;
+	margin-bottom: 10px;
+	margin-right: -5px;
+	margin-left: -5px;
+}
+
+.ip-progress-item i {
+	font-size: 2.5em;
 }
 
 .ip-new-project {
-	
+
+}
+
+.ip-content-pane {
+	float: left;
+	margin-left: 25%;
+    width: 75%;
+	color: #3e3f3a;
+	padding-left: 0px;
+}
+
+.ip-sidebar {
+	position: fixed;
+    width: 25%;
+    padding-right: 0px;
+}
+
+.ip-sidebar-pic-container {
+	margin: 0 auto;
+	max-width: 88px;
+	overflow: hidden;
+	border-radius: 200px;
+	border: solid #fff 4px;
+	-webkit-box-shadow: 0 5px 30px -14px #3e3f3a;
+    -moz-box-shadow: 0 5px 30px -14px #3e3f3a;
+    box-shadow: 0 5px 30px -14px #3e3f3a;
+}
+
+.ip-sidebar-pic {
+	max-width: 80px;
 }
