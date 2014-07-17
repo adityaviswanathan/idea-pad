@@ -8,3 +8,6 @@
 	- what tool or behavior does this idea replace or modify?
 - problem 
 	- what problem that you (and many others) face would this idea solve?
+
+## TODO
+- fix bootstrap resizing (resizing header at <1000px width)

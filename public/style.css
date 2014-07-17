@@ -138,7 +138,7 @@ input:hover {
 .ip-content-pane {
 	float: left;
 	margin-left: 25%;
-    width: 75%;
+    width: 74%;
 	color: #3e3f3a;
 	padding-left: 0px;
 }
@@ -193,5 +193,17 @@ input:hover {
 }
 
 .ip-new-project-panel-description {
-	font-size: 20px;
+	font-size: 24px;
+}
+
+.ip-new-project-panel-example {	
+	padding: 18px;
+	font-size: 16px;
+	background: rgba(62, 63, 58, 0.1);
+	border-radius: 25px;
+	font-style: italic;
+	width: 75%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
 }

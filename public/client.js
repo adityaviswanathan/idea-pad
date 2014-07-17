@@ -41,9 +41,11 @@ $('.ip-new-project-panel-controller .ip-new-project-panel-direction').on('click'
 			setTimeout(function() {
 				curr_active.removeClass('ip-new-project-active');
 				curr_active.prev().addClass('ip-new-project-active');
-				curr_active.prev().css('opacity', '1');
+				
 			}, 500);		
-			
+			setTimeout(function() {
+				curr_active.prev().css('opacity', '1');
+			}, 550);
 		}
 	} else { //go next				
 		if(curr_active.next().length > 0) {
@@ -51,9 +53,15 @@ $('.ip-new-project-panel-controller .ip-new-project-panel-direction').on('click'
 			setTimeout(function() {
 				curr_active.removeClass('ip-new-project-active');
 				curr_active.next().addClass('ip-new-project-active');
-				curr_active.next().css('opacity', '1');
+				// curr_active.next().css('opacity', '1');
 			}, 500);
-			
+			setTimeout(function() {
+				curr_active.next().css('opacity', '1');
+			}, 550);			
 		}
 	}
+});
+
+$('.ip-new-project-panel-controller .ip-new-project-panel-direction').on('hover', function() {
+	
 });
