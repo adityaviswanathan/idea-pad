@@ -34,7 +34,7 @@
 				<div class='col-md-4 ip-project-subheader'>DRAFT/PUBLISH</div>
 				<div class='col-md-4 ip-project-subheader ip-project-progress'>
 
-					<div class='ip-progress-item ip-progress-item-1'><div class='ip-progress-item-inner ip-progress-item-inner-1'></div></div>
+					<div class='ip-progress-item ip-progress-item-1 ip-progress-item-active'><div class='ip-progress-item-inner ip-progress-item-inner-1'></div></div>
 					<div class='ip-progress-divider'></div>
 					<div class='ip-progress-item ip-progress-item-2'><div class='ip-progress-item-inner ip-progress-item-inner-2'></div></div>
 					<div class='ip-progress-divider'></div>
@@ -55,73 +55,81 @@
 
 			<hr>
 
-			<div class='row ip-new-project'>
-				<form>
-					<div class='ip-new-project-section ip-new-project-section-1 ip-new-project-active'>
-						<h1>one sentence</h1>
-						<br>
-						<div class='ip-new-project-panel-description'>Provide a one-sentence description of your idea.</div>
-						<div class='ip-new-project-panel-example'>ex. "My idea is a social network for college students to enable them to share pictures, statuses and content with one another."</div>
-						<br>
-					 	<input type="text" name="ip-form-os-1">
-						<br>
-					</div>
+			<div class='row'>
+				<div class='ip-new-project col-md-8'>
+					<form>
+						<div class='ip-new-project-section ip-new-project-section-1 ip-new-project-active'>
+							<h1>one sentence</h1>
+							<br>
+							<div class='ip-new-project-panel-description'>Provide a one-sentence description of your idea.</div>
+							<div class='ip-new-project-panel-example'>ex. "My idea is a social network for college students to enable them to share pictures, statuses and content with one another."</div>
+							<br>
+						 	<input type="text" name="ip-form-os-1">
+							<br>
+						</div>
 
-					<div class='ip-new-project-section ip-new-project-section-2'>
-						<h1>analog</h1>
-						<br>
-						<div class='ip-new-project-panel-description'>What is an effective analogy for your idea using existing products and services?</div>
-						<div class='ip-new-project-panel-example'>ex. "Yahoo Groups for college students"</div>
-						<br>
-					 	<input type="text" name="ip-form-analog-1">&nbspfor&nbsp<input type="text" name="ip-form-analog-2">
-						<br>
-					</div>
+						<div class='ip-new-project-section ip-new-project-section-2'>
+							<h1>problem</h1>
+							<br>
+							<div class='ip-new-project-panel-description'>What problem does your idea solve?</div>
+							<div class='ip-new-project-panel-example'>ex. "My idea enables students to effectively collaborate and socialize online instead of having to arrange personal meetings to exchange information and content"</div>
+							<br>
+							the product solves <input type="text" name="ip-form-problem">
+							<br>
+						</div>
 
-					<div class='ip-new-project-section ip-new-project-section-3'>
-						<h1>replacement</h1>
-						<br>
-						<div class='ip-new-project-panel-description'>What products or services does your idea replace?</div>
-						<div class='ip-new-project-panel-example'>ex. "MySpace, Friendster, Digg"</div>
-						<br>
-						replaces&nbsp<input type="text" name="ip-form-replacement">
-						<br>
-					</div>
+						<div class='ip-new-project-section ip-new-project-section-3'>
+							<h1>analog</h1>
+							<br>
+							<div class='ip-new-project-panel-description'>What is an effective analogy for your idea using existing products and services?</div>
+							<div class='ip-new-project-panel-example'>ex. "Yahoo Groups for college students"</div>
+							<br>
+						 	<input type="text" name="ip-form-analog-1" class="ip-form-analog-field"><div class="ip-form-analog-decoration">for</div><input type="text" name="ip-form-analog-2" class="ip-form-analog-field">
+							<br>
+						</div>
 
-					<div class='ip-new-project-section ip-new-project-section-4'>
-						<h1>problem</h1>
-						<br>
-						<div class='ip-new-project-panel-description'>What problem does your idea solve?</div>
-						<div class='ip-new-project-panel-example'>ex. "My idea enables students to effectively collaborate and socialize online instead of having to arrange personal meetings to exchange information and content"</div>
-						<br>
-						the product solves <input type="text" name="ip-form-problem">
-						<br>
-					</div>
+						<div class='ip-new-project-section ip-new-project-section-4'>
+							<h1>replacement</h1>
+							<br>
+							<div class='ip-new-project-panel-description'>What products or services does your idea replace?</div>
+							<div class='ip-new-project-panel-example'>ex. "MySpace, Friendster, Digg"</div>
+							<br>
+							replaces&nbsp
+							<ul>
+								<li><input type="text" name="ip-form-data-source" onkeydown="return newField(event)"></li>
+							</ul>
+							<br>
+						</div>
 
-					<div class='ip-new-project-section ip-new-project-section-5'>
-						<h1>data sources</h1>
-						<br>
-						<div class='ip-new-project-panel-description'>Where will you need data from to make this work?</div>
-						<div class='ip-new-project-panel-example'>ex. "Facebook, Twitter, Google Maps"</div>
-						<br>
-						<ul>
-							<li><input type="text" name="ip-form-data-source" onkeydown="return newField(event)"></li>
-						</ul>
-						<br>
-					</div>
+						<div class='ip-new-project-section ip-new-project-section-5'>
+							<h1>data sources</h1>
+							<br>
+							<div class='ip-new-project-panel-description'>Where will you need data from to make this work?</div>
+							<div class='ip-new-project-panel-example'>ex. "Facebook, Twitter, Google Maps"</div>
+							<br>
+							<ul>
+								<li><input type="text" name="ip-form-data-source" onkeydown="return newField(event)"></li>
+							</ul>
+							<br>
+						</div>
 
-					<div class='ip-new-project-section ip-new-project-section-6'>
-						<h1>streams</h1>
-						<br>
-						<div class='ip-new-project-panel-description'>What is the intended revenue stream?</div>
-						<br>
-						<input type="radio" name="ip-form-stream" class="ip-form-stream-unit">unit
-						<input type="radio" name="ip-form-stream" class="ip-form-stream-subs">subscription
-						<input type="radio" name="ip-form-stream" class="ip-form-stream-comm">commission
-						<input type="radio" name="ip-form-stream" class="ip-form-stream-ads">advertising
-						<input type="radio" name="ip-form-stream" class="ip-form-stream-other">other
-						<div class="ip-form-stream-display"></div>
-					</div>
-				</form>
+						<div class='ip-new-project-section ip-new-project-section-6'>
+							<h1>streams</h1>
+							<br>
+							<div class='ip-new-project-panel-description'>What is the intended revenue stream?</div>
+							<br>
+							<input type="radio" name="ip-form-stream" class="ip-form-stream-unit">unit
+							<input type="radio" name="ip-form-stream" class="ip-form-stream-subs">subscription
+							<input type="radio" name="ip-form-stream" class="ip-form-stream-comm">commission
+							<input type="radio" name="ip-form-stream" class="ip-form-stream-ads">advertising
+							<input type="radio" name="ip-form-stream" class="ip-form-stream-other">other
+							<div class="ip-form-stream-display"></div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-2" style='text-align:center;'>
+					<!-- <p class="arrow arrow--left"></p> -->
+				</div>
 			</div>
 
 			<br>

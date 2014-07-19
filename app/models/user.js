@@ -25,6 +25,23 @@ var userSchema = mongoose.Schema({
     }
 });
 
+var projectSchema = mongoose.Schema({
+
+    meta            : {
+        created     : Date,
+        modified    : Date,
+        author      : {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+    },
+    data            : {
+        sentence    : String,
+        problem     : String,
+        analog      : [],
+        replacement : [],
+        sources     : [],
+        stream      : []
+    }
+});
+
 // methods ======================
 // generating a hash
 userSchema.methods.generateHash = function(password) {
@@ -38,3 +55,4 @@ userSchema.methods.validPassword = function(password) {
 
 // create the model for users and expose it to our app
 module.exports = mongoose.model('User', userSchema);
+// module.exports = mongoose.model('Project', projectSchema);

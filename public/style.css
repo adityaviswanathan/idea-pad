@@ -38,6 +38,11 @@ h1, h2, h3, h4 {
 	font-family: 'fenixregular';
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
 	/*background: #171d25;*/
 	height: 4000px;
@@ -111,6 +116,14 @@ input:hover {
 	height: 20px;
 	background: rgba(62, 63, 58, 0.3);
 	border-radius: 100px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.ip-progress-item-active {
+	background: #60783c;
 }
 
 .ip-progress-item-inner {
@@ -132,7 +145,7 @@ input:hover {
 }
 
 .ip-new-project {
-
+	/*width: 66%;*/
 }
 
 .ip-content-pane {
@@ -144,7 +157,13 @@ input:hover {
 }
 
 .ip-content-pane input {
-	font-size: 26px;
+	outline: none;
+	font-size: 30px;
+	margin: 10px;
+	padding: 5px;
+	font-family: 'fenixregular';
+	width: 90%;
+	margin-left: 0px;
 }
 
 .ip-sidebar {
@@ -202,8 +221,28 @@ input:hover {
 	background: rgba(62, 63, 58, 0.1);
 	border-radius: 25px;
 	font-style: italic;
-	width: 75%;
+	width: 90%;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	border-radius: 10px;
+}
+
+.ip-new-project-panel-direction {
+	cursor: pointer;
+}
+
+.ip-form-analog-decoration {
+	margin-left: 44%;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.ip-form-analog-field {
+	text-align: center;
+}
+
+.ip-new-project-guider-next {
+	font-size: 16px;
+	display: inline-block;
+	margin: 4px;
 }

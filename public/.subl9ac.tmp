@@ -47,12 +47,6 @@ $('.ip-new-project-panel-controller .ip-new-project-panel-direction').on('click'
 				curr_active.prev().css('opacity', '1');
 			}, 550);
 		}
-
-		if(!($('.ip-progress-item-active').hasClass('ip-progress-item-1'))) {
-			var selector =  $('.' + $('.ip-progress-item-active').attr('class').split(' ')[1]);
-			selector.prev().prev().addClass('ip-progress-item-active');
-			selector.removeClass('ip-progress-item-active');
-		}
 	} else { //go next				
 		if(curr_active.next().length > 0) {
 			curr_active.css('opacity', '0');
@@ -65,14 +59,9 @@ $('.ip-new-project-panel-controller .ip-new-project-panel-direction').on('click'
 				curr_active.next().css('opacity', '1');
 			}, 550);			
 		}
-
-		if(!($('.ip-progress-item-active').hasClass('ip-progress-item-6'))) {
-			var selector =  $('.' + $('.ip-progress-item-active').attr('class').split(' ')[1]);
-			selector.next().next().addClass('ip-progress-item-active');
-			selector.removeClass('ip-progress-item-active');
-		}
 	}
-	
+ip-progress-item-active
+	var next_selector = $('.ip-progress-item-active').next();
 });
 
 $('.ip-new-project-panel-controller .ip-new-project-panel-direction').on('hover', function() {
